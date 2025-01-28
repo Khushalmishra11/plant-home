@@ -35,27 +35,27 @@ function init() {
 
 init();
 
-gsap.to(".page1 h1",{
+var tl = gsap.timeline({
+    scrollTrigger:{
+        trigger:".page1 h1",
+        scroller:".main",
+        markers:true,
+        start:"top 27%",
+        end:"top 0",
+        scrub:3
+    }
+})
+
+tl.to(".page1 h1",{
     x:-80,
     duration:3,
-    scrollTrigger:{
-        trigger:".page1 h1",
-        scroller:".main",
-        markers:true,
-        start:"top 30%",
-        end:"top 0",
-        scrub:2
-    }
-})
-gsap.to(".page1 h2",{
+},"anim")
+tl.to(".page1 h2",{
     x:100,
     duration:3,
-    scrollTrigger:{
-        trigger:".page1 h1",
-        scroller:".main",
-        markers:true,
-        start:"top 30%",
-        end:"top 0",
-        scrub:2
-    }
-})
+},"anim")
+
+tl.to(".page1 video",{
+    width: "90%",
+    duration:3,
+},"anim")
