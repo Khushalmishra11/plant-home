@@ -111,7 +111,7 @@ const team = [
     expertise: "Plant Health, Customer Education",
   },
   {
-    name: "Khushal Mishra",
+    name: "Kunal Singh",
     role: "Sustainability Director",
     image:
       "https://images.pexels.com/photos/20324601/pexels-photo-20324601.jpeg",
